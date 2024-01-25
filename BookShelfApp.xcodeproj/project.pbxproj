@@ -17,6 +17,8 @@
 		92B62CE82B630CF7000ECFB9 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 92B62CE72B630CF7000ECFB9 /* FirebaseFirestore */; };
 		92B62CEA2B630CF7000ECFB9 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 92B62CE92B630CF7000ECFB9 /* FirebaseFirestoreSwift */; };
 		92B62CEC2B630CF7000ECFB9 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 92B62CEB2B630CF7000ECFB9 /* FirebaseStorage */; };
+		92B62CF22B6311AA000ECFB9 /* ViewModel in Resources */ = {isa = PBXBuildFile; fileRef = 92B62CF12B6311AA000ECFB9 /* ViewModel */; };
+		92B62CF42B6311BA000ECFB9 /* Profile in Resources */ = {isa = PBXBuildFile; fileRef = 92B62CF32B6311BA000ECFB9 /* Profile */; };
 		92BEC9242B62E9EC00C69C31 /* BookShelfApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BEC9232B62E9EC00C69C31 /* BookShelfApp.swift */; };
 		92BEC9262B62E9EC00C69C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BEC9252B62E9EC00C69C31 /* ContentView.swift */; };
 		92BEC9282B62E9EF00C69C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92BEC9272B62E9EF00C69C31 /* Assets.xcassets */; };
@@ -50,6 +52,8 @@
 		92B62CDE2B630359000ECFB9 /* SettingsInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInformationView.swift; sourceTree = "<group>"; };
 		92B62CE02B6306AD000ECFB9 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		92B62CE22B630BED000ECFB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		92B62CF12B6311AA000ECFB9 /* ViewModel */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModel; sourceTree = "<group>"; };
+		92B62CF32B6311BA000ECFB9 /* Profile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Profile; sourceTree = "<group>"; };
 		92BEC9202B62E9EC00C69C31 /* BookShelfApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookShelfApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92BEC9232B62E9EC00C69C31 /* BookShelfApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookShelfApp.swift; sourceTree = "<group>"; };
 		92BEC9252B62E9EC00C69C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				92B62CD42B62EB4F000ECFB9 /* Authentication */,
+				92B62CF32B6311BA000ECFB9 /* Profile */,
 				92B62CD32B62EB43000ECFB9 /* Root */,
 			);
 			path = Core;
@@ -136,6 +141,7 @@
 		92B62CD42B62EB4F000ECFB9 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				92B62CF12B6311AA000ECFB9 /* ViewModel */,
 				92B62CED2B630D65000ECFB9 /* View */,
 			);
 			path = Authentication;
@@ -323,7 +329,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				92BEC92B2B62E9EF00C69C31 /* Preview Assets.xcassets in Resources */,
+				92B62CF22B6311AA000ECFB9 /* ViewModel in Resources */,
 				92BEC9282B62E9EF00C69C31 /* Assets.xcassets in Resources */,
+				92B62CF42B6311BA000ECFB9 /* Profile in Resources */,
 				92B62CE32B630BED000ECFB9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
