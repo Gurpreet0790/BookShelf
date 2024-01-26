@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var viewModelObj: AuthViewModel
     var body: some View {
-        LoginView()
+        Group{
+            if viewModelObj.userSession != nil {
+              UserProfileView()
+            }
+            else
+            {
+                LoginView()
+            }
+        }
     }
 }
 

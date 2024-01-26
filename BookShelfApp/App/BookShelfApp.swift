@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct BookShelfAppApp: App {
+    @StateObject var viewModelObj = AuthViewModel()
+    
+    init() {
+        FirebaseApp.configure()
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(viewModelObj)
         }
     }
 }

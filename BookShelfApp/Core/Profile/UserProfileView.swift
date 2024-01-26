@@ -8,25 +8,27 @@
 import SwiftUI
 
 struct UserProfileView: View {
+    @EnvironmentObject var viewModelObj: AuthViewModel
     var body: some View {
+        if let user = viewModelObj.currentUser {
         List{
             Section{
                 HStack {
-                    Text(UserInfo.MOCK_USER.intials)
+                    Text(user.intials)
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .frame(width: 72, height: 72)
                         .background(Color(.systemGray3))
-                    .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+                        .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
                     
                     VStack(alignment: .leading, spacing: 5){
-                        Text(UserInfo.MOCK_USER.fullName
+                        Text(user.fullName
                         )
-                            .font(.subheadline)
-                            .fontWeight(.semibold)
-                            .padding(.top, 5)
+                        .font(.subheadline)
+                        .fontWeight(.semibold)
+                        .padding(.top, 5)
                         
-                        Text(UserInfo.MOCK_USER.email)
+                        Text(user.email)
                             .font(.footnote)
                             .foregroundColor(.gray)
                     }
@@ -59,7 +61,7 @@ struct UserProfileView: View {
             
             Section("Account"){
                 Button{
-                    print("Sign Out Account")
+                    viewModelObj.signOut()
                 } label: {
                     SettingsInformationView(imageNameStr: "arrow.left.circle.fill", titleStr: "Sign Out", tintColor: Color(.red))
                 }
@@ -71,6 +73,7 @@ struct UserProfileView: View {
                 }
             }
         }
+    }
     }
 }
 
